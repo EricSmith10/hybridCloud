@@ -283,7 +283,7 @@ const sec=ms=>ms==null?'–':(ms/1000).toFixed(ms<10000?2:1)+'s';
 document.querySelectorAll('button[data-r]').forEach(b=>b.onclick=()=>fetch('/api/rate?n='+b.dataset.r).then(tick));
 document.querySelectorAll('button[data-m]').forEach(b=>b.onclick=()=>fetch('/api/mode?m='+b.dataset.m).then(tick));
 function render(s){
- $('lname').textContent=s.local_label;$('lname1').textContent=s.local_label.replace(/^Your /,'');$('cname').textContent=s.cloud_label;
+ $('lname').textContent=s.local_label;{const t=s.local_label.replace(/^Your /i,'');$('lname1').textContent=t.charAt(0).toUpperCase()+t.slice(1);}$('cname').textContent=s.cloud_label;
  $('rate').textContent=s.rate;$('lr').textContent=s.local_rps;$('cr').textContent=s.cloud_rps;$('cap').textContent=s.capacity;
  $('q').textContent=s.queue;$('lms').textContent=sec(s.local_ms);$('cms').textContent=sec(s.cloud_ms);
  $('lms').style.color=s.local_ms>1000?'var(--red)':'';$('q').style.color=s.queue>0?'var(--red)':'';
