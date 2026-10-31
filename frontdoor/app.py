@@ -28,14 +28,9 @@ BANNER = {
     "cloud": ("#1d4ed8", "#dbeafe", "&#9729;&#65039;", "Public cloud"),
 }.get(LOCATION_TYPE, ("#374151", "#f3f4f6", "&#128421;&#65039;", "Server"))
 
-PRODUCTS = [
-    ("Insulated Winter Parka", "$189"),
-    ("Cast Iron Skillet", "$49"),
-    ("Smart LED Bulb 4-pack", "$39"),
-    ("Holiday Light String", "$24"),
-    ("Thermal Travel Mug", "$19"),
-    ("Wireless Earbuds", "$79"),
-]
+PRODUCTS = [("65-inch 4K Smart TV", "$499"), ("Noise-Cancelling Headphones", "$249"),
+            ("Gaming Laptop", "$999"), ("Next-Gen Game Console", "$499"),
+            ("Smartwatch", "$299"), ("Robot Vacuum", "$299")]
 
 
 def page():
